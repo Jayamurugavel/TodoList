@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todolist</title> 
+    <link rel="icon" href="image/Gartoon-Team-Gartoon-Apps-Gtodo-todo-list.512.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sixtyfour&display=swap" rel="stylesheet">
+<style>
+    
+        
+</style>
+      
+    
+
+</head>
+
+
+
+
+
+
+<body>
+<input id="input">
+<button id="btn" onclick="add()">Add</button>
+
+
+<ul id="container">
+    <li class="li1">
+        Hello
+        <button class="btn2" onclick="deleteitem(event)">Delete</button>
+    </li>
+</ul>
+
+<script>  
+    //selecting ul
+    var ul=document.getElementById("container")
+    //select input
+    var input=document.getElementById("input")
+    
+    function add()
+    {
+        var listitem=document.createElement("li")
+         listitem .innerHTML=input.value + "<button class='btn3' onclick='deleteitem(event)'> delete</button>" //create pannura elle new elemnet kum delete button kudukurom parent elemnt use panni
+
+        ul.append(listitem)
+
+    }
+    //deleteitem nu new fuction create panna num
+    function deleteitem(event)
+    {
+        event.target.parentElement.remove()
+    }
+
+
+
+</script>
+</body>
+</html>
